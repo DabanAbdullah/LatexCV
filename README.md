@@ -41,4 +41,4 @@ You can easily copy this LaTeX code to [Overleaf](https://www.overleaf.com/) and
 ## Preview the Result:
 Here is a preview of the final CV layout, showing a sample background and layout:
 
-![CV Preview](https://github.com/DabanAbdullah/LatexCV/cv-screenshot.png)
+![CV Preview](https://github.com/DabanAbdullah/LatexCV/blob/main/cv-screenshot.png)
