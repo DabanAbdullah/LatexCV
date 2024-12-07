@@ -1,0 +1,166 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV theme and color
+\moderncvstyle{banking} % Options: banking, classic, casual
+\moderncvcolor{blue}    % Options: blue, green, orange, red
+\usepackage{xcolor}
+% Remove circles for itemize
+\renewcommand{\labelitemi}{}
+% Packages for icons and additional functionality
+\usepackage{fontawesome5} % For Font Awesome icons
+\usepackage[scale=0.75]{geometry} % Adjust margins
+\usepackage{background} % For adding a background image
+\usepackage{tikz}
+\usepackage{graphicx}
+% Background settings
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.03, % Increased opacity for less transparency
+  angle=0,
+  position=current page.south,
+  vshift=10cm,
+  hshift=0cm,
+  contents={\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{background.jpg}}
+}
+
+\begin{document}
+\BgThispage % Apply background to this page
+\makecvtitle
+
+% Profile Section (Centered)
+\vspace*{-4cm} % Adjust this value to your preference
+\begin{center}
+  % Circular Profile Picture with Shadow Glow
+  \begin{tikzpicture}
+    % Shadow-like glow effect
+    \shade[outer color=cyan!20!black, inner color=cyan!5!white, opacity=0.6, blur shadow=20pt]
+      (0,0) circle [radius=2.1cm];
+    % Circular image with thin border
+    \draw[white, line width=0.5mm] (0,0) circle [radius=2cm];
+    \clip (0,0) circle [radius=2cm];
+    \node at (0,0) {\includegraphics[width=4cm,height=4cm,keepaspectratio]{profilepicture.png}};
+  \end{tikzpicture}
+
+  % Name below the profile picture
+  \vspace{0.5cm}
+  {\color[rgb]{0.369, 0.476, 0.476}\textbf{\fontsize{18pt}{22pt}\selectfont Your full Name here}}
+
+  % Address and Personal Information
+  \vspace{0.3cm} % Adjust space as needed
+  {\color[rgb]{0.369, 0.476, 0.476}\fontsize{12pt}{15pt}\selectfont N\"urnberg, Germany}
+
+\end{center}
+
+% Personal Information Section
+\title{}
+\vspace{0.3cm} % Adjust space as needed
+\renewcommand*{\titlefont}{\normalfont\bfseries\LARGE}
+\title{}
+\address{}
+\phone[mobile]{+49 your number}
+\email{youremail@gmail.com}
+\homepage{your website}
+\social[linkedin]{linkedin-username}
+\social[github]{githubprofile}
+
+% Define language proficiency with small circles
+\newcommand{\languageproficiency}[1]{
+    \ifnum#1=5 \faCircle~\faCircle~\faCircle~\faCircle~\faCircle
+    \else\ifnum#1=4 \faCircle~\faCircle~\faCircle~\faCircle~\faCircleO
+    \else\ifnum#1=3 \faCircle~\faCircle~\faCircle~\faCircleO~\faCircleO
+    \else\ifnum#1=2 \faCircle~\faCircle~\faCircleO~\faCircleO~\faCircleO
+    \else \faCircle~\faCircleO~\faCircleO~\faCircleO~\faCircleO
+    \fi\fi\fi\fi\fi
+}
+
+\begin{document}
+\BgThispage % Apply background to this page
+\makecvtitle
+
+% Summary Section
+\section{\faInfoCircleSolid~Summary}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur volutpat velit, ac dictum turpis facilisis ut. Suspendisse et ante eu risus convallis fermentum. Nullam interdum eros vitae nunc scelerisque, at hendrerit lectus cursus. Fusce lacinia, ipsum a ultricies lacinia, leo turpis facilisis nisl, vel laoreet risus nulla vel lectus. 
+
+% Experience Section
+
+\section{\faBriefcaseSolid~Experience}
+\cventry{date}{\color[rgb]{0.369, 0.476, 0.476}Web Application Developer}{organization name}{city}{} {
+    \begin{itemize}
+        \item \faLaptopCode~Developed and maintained web applications using C\#, ASP.NET, and MVC framework, ensuring high performance and responsiveness to requests
+        \item \faUsers~Collaborated with cross-functional teams to design, develop, and deploy web solutions, incorporating both front-end and back-end technologies
+        \item \faDatabase~Managed SQL Server databases.
+        \item \faServer~Implemented RESTful APIs and back-end functionalities
+    \end{itemize}
+}
+
+\cventry{date}{\color[rgb]{0.369, 0.476, 0.476}Technical Trainer - IT Support}{organization name}{city}{} {
+    \begin{itemize}
+        \item \faDesktop~Designed department website and attendance system.
+        \item \faDatabase~Maintained complex databases and ensured efficient record-keeping.
+        \item \faTools~Delivered comprehensive IT support, resolving 1st and 2nd level issues.
+    \end{itemize}
+}
+
+% Education Section
+\section{\faGraduationCapSolid~Education}
+\cventry{Graduation: March/2025}{\faGraduationCap \color[rgb]{0.369, 0.476, 0.476}Master of something}{Uni name}{city}{} {
+    Key Modules: Trends in Web Engineering, Distributed Systems. \\
+    Thesis: Input Data Representation Strategies in Fullscreen Chatbot Interfaces \\
+    Website: \href{https://www.tu-chemnitz.de}{\faLink \, TU Chemnitz}
+}
+
+\cventry{date}{\faUniversity \color[rgb]{0.369, 0.476, 0.476}Bachelor in Computer Science}{University name}{city}{} {
+    Key Modules: Object-Oriented Programming, Data Structure, Computer Vision, and AI. \\
+    Website: \href{https://www.uoh.edu.iq}{\faLink \, University of Human Development}
+}
+
+% Skills Section
+% Skills Section
+\newpage
+\section{\faCodeSolid~Skills}
+\cvitem{\faCode~Programming Languages}{C\#, JavaScript, Python, SQL}
+\cvitem{\faCogs~Frameworks \& Tools}{ASP.NET, MVC, SignalR, REST, Botpress}
+\cvitem{\faDatabase~Databases}{SQL Server, MongoDB, PostgreSQL}
+\cvitem{\faCloud~Cloud Technologies}{Microsoft Azure, Google Workspace}
+\cvitem{\faTools~Other Skills}{Git, Docker, Information Security, XML}
+\cvitem{\faUsers~Soft Skills}{Excellent Communication Skills, Teamwork \& Collaboration, Critical Thinking}
+
+% Achievements Section
+\section{\faTrophySolid~Key Achievements}
+\cvitem{\faCheck}{Enhanced Web Performance}
+\cvitem{\faCheck}{Optimized IT Operations}
+\cvitem{\faCheck}{Coordinated Project Delivery}
+
+\section*{Courses and Certification}
+
+\begin{itemize}
+    \item \faGraduationCap \hspace{2pt} B1 Deutsch - TELC Certificate
+    \item \faGlobe \hspace{2pt} TOEFL Certificate - Proficiency in English
+    \item \faDatabase \hspace{2pt} Diploma in Database Management Systems
+    \item \faLaptopCode \hspace{2pt} .NET Core MVC - The Complete Guide 2023 (E-commerce, .NET 8 Edition)
+    \item \faGit \hspace{2pt} Git \& GitHub Bootcamp
+    \item \faCogs \hspace{2pt} Bootpress: Building Chatbots
+    \item \faCloud \hspace{2pt} AZ-900: Microsoft Azure Fundamentals Training
+\end{itemize}
+
+% Languages Section with Progress Bars
+% Languages Section with Proficiency Circles
+\section{\faLanguage~Languages}
+\cvitemwithcomment{English}{Native}{\color[rgb]{0.369, 0.476, 0.476}\languageproficiency{5}}
+\cvitemwithcomment{German}{Intermediate}{\color[rgb]{0.369, 0.476, 0.476}\languageproficiency{3}}
+\cvitemwithcomment{Arabic}{Advanced}{\color[rgb]{0.369, 0.476, 0.476}\languageproficiency{4}}
+\cvitemwithcomment{Kurdish}{Native}{\color[rgb]{0.369, 0.476, 0.476}\languageproficiency{5}}
+
+
+
+\vfill % This will push the footer to the bottom
+\begin{flushright} % Align the image to the right
+    \includegraphics[width=3cm]{sign.png} % Replace "signature_image" with your image file name
+\end{flushright}
+\makecvfooter
+  {\today}
+  {\hfill your full name }
+  {\thepage}
+
+\end{document}
